@@ -15,10 +15,10 @@ const userPassword = prompt('Enter password');
 
 if (userPassword === ADMIN_PASSWORD) {
   message = ACCESS_IS_ALLOWED;
-} else if (userPassword === ADMIN_PASSWORD) {
-  message = ACCESS_DENIED;
-} else {
+} else if (userPassword === null) {
   message = CANCELED_BY_USER;
+} else {
+  message = ACCESS_DENIED;
 }
 
 console.log(message);
